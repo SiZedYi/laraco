@@ -12,6 +12,8 @@ import { NumericFormat } from 'react-number-format';
 
 import actions from '../../actions';
 
+import CarouselSlider from '../../components/Common/CarouselSlider';
+import { responsiveOneItemCarousel } from '../../components/Common/CarouselSlider/utils';
 import Input from '../../components/Common/Input';
 import Button from '../../components/Common/Button';
 import LoadingIndicator from '../../components/Common/LoadingIndicator';
@@ -65,19 +67,27 @@ class ProductPage extends React.PureComponent {
           <>
             <Row className='flex-row'>
               <Col xs='12' md='5' lg='5' className='mb-3 px-3 px-md-2'>
+                {/* Product image slider */}
                 <div className='position-relative'>
-                  <img
-                    className='item-image'
-                    src={`${
-                      product.imageUrl
-                        ? product.imageUrl
-                        : '/images/placeholder-image.png'
-                    }`}
-                  />
+                  <CarouselSlider
+                  swipeable={true}
+                  showDots={true}
+                  infinite={true}
+                  autoPlay={true}
+                  slides={product}
+                  responsive={responsiveOneItemCarousel}
+                  >
+
+                  {product.imageUrl.map((item, index) => (
+                    <img key={index} src={item} />
+                  ))}
+
+                  </CarouselSlider>
+
                   {product.inventory <= 0 && !shopFormErrors['quantity'] ? (
-                    <p className='stock out-of-stock'>Out of stock</p>
+                    <p className='stock out-of-stock'>Hết hàng</p>
                   ) : (
-                    <p className='stock in-stock'>In stock</p>
+                    <p className='stock in-stock'>Còn hàng</p>
                   )}
                 </div>
               </Col>
@@ -141,7 +151,7 @@ class ProductPage extends React.PureComponent {
                             !shopFormErrors['quantity']
                           }
                           text='Remove From Bag'
-                          className='bag-btn'
+                          className='bag-btn home-btn'
                           icon={<BagIcon />}
                           onClick={() => handleRemoveFromCart(product)}
                         />

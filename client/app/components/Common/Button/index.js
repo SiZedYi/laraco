@@ -97,7 +97,7 @@ Button.defaultProps = {
   iconDirection: 'left',
   iconClassName: '',
   borderless: false,
-  round: 3
+  round: 25
 };
 
 export default Button;

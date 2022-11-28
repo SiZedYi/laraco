@@ -1,7 +1,8 @@
 /**
  *
  * Carousel
- *
+ * https://github.com/YIZHUANG/react-multi-carousel/blob/master/stories/index.stories.js
+ * https://react-multi-carousel.surge.sh
  */
 
 import React from 'react';
@@ -29,6 +30,7 @@ const CarouselSlider = props => {
       draggable={draggable}
       showDots={showDots}
       infinite={infinite}
+
       autoPlay={autoPlay}
       keyBoardControl={keyBoardControl}
       autoPlaySpeed={autoPlaySpeed}
@@ -50,9 +52,9 @@ CarouselSlider.defaultProps = {
   draggable: false,
   showDots: false,
   infinite: true,
-  autoPlay: false,
+  autoPlay: true,
   keyBoardControl: true,
-  ssr: false,
+  ssr: true,
   autoPlaySpeed: 4000
 };
 

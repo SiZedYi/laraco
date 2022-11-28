@@ -1,12 +1,18 @@
 [
   {
-    "imageUrl": "/images/banners/banner-9.jpg",
+    "imageUrl": "/images/banners/zyro-image(1).png",
+    "link": "",
+    "title": "DƯỢC LIỆU RỘNG KHẮP VIỆT NAM",
+    "content": "<p>CHÚNG TÔI MANG ĐẾN NHỮNG SẢN PHẨM</p>\n"
+  },
+  {
+    "imageUrl": "/images/banners/banner-1.jpg",
     "link": "",
     "title": "",
     "content": "<p></p>\n"
   },
   {
-    "imageUrl": "/images/banners/banner-10.jpg",
+    "imageUrl": "/images/banners/banner-1.jpg",
     "link": "",
     "title": "",
     "content": "<p></p>\n"

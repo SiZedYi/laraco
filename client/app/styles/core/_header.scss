@@ -13,11 +13,13 @@
 }
 
 .header {
-  background-color: $white;
-  border-bottom: $border-primary;
+  position: sticky;
+    top: 0px;
+    z-index: 1;
+  background-color: $theme-orange;
 
   .logo {
-    font-size: 23px !important;
+    font-size: 24px !important;
     font-weight: $font-weight-medium;
   }
 }
@@ -61,7 +63,7 @@
 
   .fa {
     cursor: pointer;
-    color: $theme-dark-gray;
+    color: #101107;
     font-size: $font-size-x-huge !important;
   }
 
@@ -73,7 +75,7 @@
   }
 
   .navbar {
-    background-color: $white !important;
+    background-color: $theme-orange !important;
     justify-content: flex-end;
     padding: 0;
 
@@ -99,6 +101,7 @@
     .nav-link {
       padding-top: 0;
       padding-bottom: 0;
+      color: #101107 !important;
 
       &.active {
         color: $font-hover-color !important;

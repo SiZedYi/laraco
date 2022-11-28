@@ -7,61 +7,40 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Nav } from 'reactstrap';
 
 import actions from '../../actions';
-import ProductList from '../../components/Store/ProductList';
+import AboutUs from '../../components/Common/AboutUs';
 import banners from './banners.json';
-import CarouselSlider from '../../components/Common/CarouselSlider';
-import { responsiveOneItemCarousel } from '../../components/Common/CarouselSlider/utils';
+import Button from '../../components/Common/Button';
 
 class Homepage extends React.PureComponent {
-
   render() {
-    const { products, isLoading, authenticated, updateWishlist } = this.props;
-    const displayProducts = products && products.length > 0;
+    const {
+      history,
+    } = this.props;
 
     return (
-      <div className='homepage'>
-        {/* Test */}
-        <Row className='flex-row'>
-        <Col xs='12' lg='1' className='order-lg-1 mb-3 px-3 px-md-2'></Col>
-          <Col xs='12' lg='1' className='order-lg-3 mb-3 px-3 px-md-2'></Col>
-          <Col xs='12' lg='10' className='order-lg-2 mb-3 px-3 px-md-2'>
-            <div className='home-carousel'>
-              <CarouselSlider
-                swipeable={true}
-                showDots={true}
-                infinite={true}
-                autoPlay={true}
-                slides={banners}
-                responsive={responsiveOneItemCarousel}
-              >
-                {banners.map((item, index) => (
-                  <img key={index} src={item.imageUrl} />
-                ))}
-              </CarouselSlider>
+    <div className='homepage'>
+          <div className='banner'>
+            <div  className='banner-title'>
+              <div className='title'>DƯỢC LIỆU UY TÍN HÀNG ĐẦU VIỆT NAM</div>
+              <div className='subtitle'>Chúng tôi tự hào mang đến cho khách hàng những sản phẩm tốt nhất trên
+              thị trường với giá ưu đãi nhất</div>
+              <Button
+              variant='primary'
+              text='xem thêm'
+              className='bag-btn home-btn'
+              onClick={() => history.push("../shop")}
+              />
             </div>
-          </Col>
-        </Row>
-        <Row className='flex-row'>
-          <span style={{marginBottom: 50}}></span>
-        </Row>
-        {/* Products */}
-                  {/* CHƯA HOÀN THÀNH  */}
-
-        <div className='products-shop'>
-          {isLoading && <LoadingIndicator />}
-          {displayProducts && (
-          <ProductList
-            products={products}
-            authenticated={authenticated}
-            updateWishlist={updateWishlist}
-          />
-        )}
-        </div>
-      </div>
-    );
+            <div className='home-img slide-in'>
+              <img src={banners[0].imageUrl} />
+            </div>
+          </div>
+      <AboutUs/>
+    </div>
+  );
   }
 }
 
@@ -74,3 +53,34 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, actions)(Homepage);
+
+    // <div className='homepage'>
+    //   {/* Test */}
+    //   <Row className='flex-row'>
+    //     <Col xs='12' lg='7' className='order-lg-2 mb-3 px-3 px-md-2'>
+    //       <div className='home-carousel'>
+    //         <CarouselSlider
+    //           swipeable={true}
+    //           showDots={true}
+    //           infinite={true}
+    //           autoPlay={true}
+    //           slides={banners}
+    //           responsive={responsiveOneItemCarousel}
+    //         >
+    //           {banners.map((item, index) => (
+    //             <img key={index} src={item.imageUrl} />
+    //           ))}
+    //         </CarouselSlider>
+    //       </div>
+    //     </Col>
+    //     {/* <Col xs='12' lg='1' className='order-lg-1 mb-3 px-3 px-md-2'></Col> */}
+    //     <Col xs='12' lg='5' className='order-lg-1 mb-3 px-3 px-md-2'>
+    //     <div className='slider'>
+    //       CHÚNG TÔI MANG ĐẾN NHỮNG SẢN PHẨM TỐT NHẤT CHO SỨC KHỎE CỦA BẠN
+    //             </div>
+    //     </Col>
+    //   </Row>
+    //   <Row className='flex-row'>
+    //     <span style={{marginBottom: 50}}></span>
+    //   </Row>
+    // </div>

@@ -1,0 +1,20 @@
+[
+  {
+    "icon":"/images/banners/about-us-quality.png",
+    "link": "",
+    "title": "CHẤT LƯỢNG",
+    "content": "Đảm bảo chất lượng cùng với giá cả phải chăng"
+  },
+  {
+    "icon":"/images/banners/about-us-trust.png",
+    "link": "",
+    "title": "UY TÍN",
+    "content": "Nguồn gốc rõ ràng với đủ loại các mặt hàng khác nhau"
+  },
+  {
+    "icon":"/images/banners/about-us-care.png",
+    "link": "",
+    "title": "TẬN TÂM",
+    "content": "Sức khỏe của bạn là quan tâm hàng đầu của chúng tôi"
+  }
+]

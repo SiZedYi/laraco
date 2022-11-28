@@ -4,7 +4,7 @@
 $theme-green: #00acac;
 $theme-gray: #f8f9fa;
 $theme-bright-gray: #eceef3;
-$theme-dark-gray: #cccccc;
+$theme-dark-gray: #101107;
 $theme-blue: #2979ff;
 $theme-purple: #727cb6;
 $theme-white: #f6f7f8;
@@ -21,7 +21,7 @@ $theme-light-blue: #4a68aa;
 $theme-bright-red: #fb0000;
 
 $primary-color: #2962ff;
-$primary-bg: #2962ff;
+$primary-bg: #e4853f;
 
 $secondary-color: #f8f9fa;
 $secondary-bg: #f8f9fa;
@@ -51,9 +51,9 @@ $teal: #20c997 !default;
 $cyan: #67c2ef;
 $black: #000;
 
-$font-family: 'Poppins';
-$font-family-heading: 'Poppins';
-$font-family-body: 'Poppins';
+$font-family: 'Be Vietnam Pro';
+$font-family-heading: 'Be Vietnam Pro';
+$font-family-body: 'Be Vietnam Pro';
 $font-size-x-small: 12px;
 $font-size-small: 13px;
 $font-size-medium: 14px;
@@ -66,17 +66,17 @@ $font-size-heading-xsmall: 14px;
 $font-size-heading-small: 16px;
 $font-size-heading-medium: 18px;
 $font-size-heading-large: 20px;
-$font-size-heading-x-large: 24px;
+$font-size-heading-x-large: 32px;
 $font-weight-thin: 200;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
-$font-weight-bold: 700;
+$font-weight-bold: 900;
 
 // layout variables
-$btn-bg: $white;
-$btn-bg-hover: $primary-bg;
+$btn-bg: $primary-bg;
+$btn-bg-hover: $white;
 $font-color: #65676b;
 $font-light-color: #00000026;
 $font-custom-color: $theme-black;

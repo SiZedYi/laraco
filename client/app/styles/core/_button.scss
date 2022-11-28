@@ -90,13 +90,14 @@ button {
     .btn-text {
       -webkit-transition: $layout-transition-speed;
       transition: $layout-transition-speed;
+      color: $white;
     }
 
     &:hover {
-      background-color: $primary-bg;
+      background-color: $white;
 
       .btn-text {
-        color: $white !important;
+        color: $black !important;
         -webkit-transition: $layout-transition-speed;
         transition: $layout-transition-speed;
       }
@@ -269,7 +270,7 @@ body.user-is-tabbing button:focus {
 
         svg {
           fill: $white;
-          stroke: $white !important;
+          stroke: $black !important;
           -webkit-transition: $layout-transition-speed;
           transition: $layout-transition-speed;
         }
@@ -319,7 +320,7 @@ body.user-is-tabbing button:focus {
 .input-btn {
   &.bag-btn {
     box-shadow: $box-shadow-custom;
-    min-width: 185px;
+    min-width: 125px;
     @include media-breakpoint-down(sm) {
       width: 100% !important;
     }
@@ -339,7 +340,7 @@ body.user-is-tabbing button:focus {
 
         svg {
           fill: $white;
-          stroke: $white !important;
+          stroke: $black !important;
           -webkit-transition: $layout-transition-speed;
           transition: $layout-transition-speed;
         }

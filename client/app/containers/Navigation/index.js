@@ -25,6 +25,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
+import { NumericFormat } from 'react-number-format';
 
 import actions from '../../actions';
 
@@ -83,7 +84,7 @@ class Navigation extends React.PureComponent {
             className='item-image'
             src={`${
               suggestion.imageUrl
-                ? suggestion.imageUrl
+                ? suggestion.imageUrl[0]
                 : '/images/placeholder-image.png'
             }`}
           />
@@ -96,7 +97,13 @@ class Navigation extends React.PureComponent {
               </Row>
               <Row>
                 <Col>
-                  <span className='price'>${suggestion.price}</span>
+                  <span className='price'>
+                  <NumericFormat value={suggestion.price}
+                      displayType="text"
+                      allowLeadingZeros
+                      thousandSeparator=","
+                      renderText={(value) => <span  className='price mb-0'>{value}  vnd</span>}/>
+                     </span>
                 </Col>
               </Row>
             </Container>
@@ -128,7 +135,7 @@ class Navigation extends React.PureComponent {
     } = this.props;
 
     const inputProps = {
-      placeholder: 'Search Products',
+      placeholder: 'Tìm kiếm sản phẩm',
       value: searchValue,
       onChange: (_, { newValue }) => {
         onSearch(newValue);
@@ -136,29 +143,7 @@ class Navigation extends React.PureComponent {
     };
 
     return (
-      <header className='header fixed-mobile-header'>
-        {/* <div className='header-info'>
-          <Container>
-            <Row>
-              <Col md='4' className='text-center d-none d-md-block'>
-                <i className='fa fa-truck' />
-                <span>Free Shipping</span>
-              </Col>
-              <Col md='4' className='text-center d-none d-md-block'>
-                <i className='fa fa-credit-card' />
-                <span>Payment Methods</span>
-              </Col>
-              <Col md='4' className='text-center d-none d-md-block'>
-                <i className='fa fa-phone' />
-                <span>Call us 951-999-9999</span>
-              </Col>
-              <Col xs='12' className='text-center d-block d-md-none'>
-                <i className='fa fa-phone' />
-                <span> Need advice? Call us 951-999-9999</span>
-              </Col>
-            </Row>
-          </Container>
-        </div> */}
+      <header className='header fixed-mobile-header text-dark'>
         <Container>
           <Row className='align-items-center top-header'>
             <Col
@@ -235,27 +220,13 @@ class Navigation extends React.PureComponent {
                   onClick={toggleCart}
                 />
                 <Nav navbar>
-                  {brands && brands.length > 0 && (
-                    <Dropdown
-                      nav
-                      inNavbar
-                      toggle={() => this.toggleBrand()}
-                      isOpen={isBrandOpen}
+                <NavLink
+                      tag={ActiveLink}
+                      to='/contact'
+                      activeClassName='active'
                     >
-                      <DropdownToggle nav>
-                        Brands
-                        <span className='fa fa-chevron-down dropdown-caret'></span>
-                      </DropdownToggle>
-                      <DropdownMenu right className='nav-brand-dropdown'>
-                        <div className='mini-brand'>
-                          <MiniBrand
-                            brands={brands}
-                            toggleBrand={() => this.toggleBrand()}
-                          />
-                        </div>
-                      </DropdownMenu>
-                    </Dropdown>
-                  )}
+                      Liên hệ
+                    </NavLink>
                   <NavItem>
                     <NavLink
                       tag={ActiveLink}
@@ -288,10 +259,10 @@ class Navigation extends React.PureComponent {
                       </DropdownToggle>
                       <DropdownMenu right>
                         <DropdownItem onClick={() => history.push('/login')}>
-                          Login
+                          Đăng Nhập
                         </DropdownItem>
                         <DropdownItem onClick={() => history.push('/register')}>
-                          Sign Up
+                          Đăng Ký
                         </DropdownItem>
                       </DropdownMenu>
                     </UncontrolledDropdown>

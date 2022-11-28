@@ -4,7 +4,7 @@ const { Schema } = Mongoose;
 
 const options = {
   separator: '-',
-  lang: 'en',
+  lang: 'vi',
   truncate: 120
 };
 
@@ -24,7 +24,13 @@ const ProductSchema = new Schema({
     slug: 'name',
     unique: true
   },
-  imageUrl: {
+  imageUrl: [
+    String
+  ],
+  imageUrl2: {
+    type: String
+  },
+  imageUrl3: {
     type: String
   },
   imageKey: {

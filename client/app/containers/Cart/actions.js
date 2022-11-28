@@ -42,8 +42,8 @@ export const handleAddToCart = product => {
     };
 
     const { isValid, errors } = allFieldsValidation(product, rules, {
-      'min.quantity': 'Quantity must be at least 1.',
-      'max.quantity': `Quantity may not be greater than ${result}.`
+      'min.quantity': 'Số lượng mua ít nhất là 1.',
+      'max.quantity': `Số lượng mua nhiều nhất là ${result}.`
     });
 
     if (!isValid) {
@@ -206,13 +206,13 @@ const getCartItems = cartItems => {
 };
 
 const calculatePurchaseQuantity = inventory => {
-  if (inventory <= 25) {
+  if (inventory <= 2) {
     return 1;
-  } else if (inventory > 25 && inventory <= 100) {
-    return 5;
-  } else if (inventory > 100 && inventory < 500) {
-    return 25;
+  } else if (inventory > 25 && inventory <= 101) {
+    return 100;
+  } else if (inventory > 100 && inventory < 501) {
+    return 500;
   } else {
-    return 50;
+    return 1000;
   }
 };

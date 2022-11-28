@@ -122,7 +122,8 @@
             color: $font-subtext-color !important;
 
             span {
-              font-weight: $font-weight-normal;
+              font-weight: $font-weight-medium;
+              font-size: $font-size-medium;
             }
           }
         }

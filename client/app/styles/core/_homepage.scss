@@ -1,2 +1,91 @@
-// .homepage {
-// }
+.homepage {
+    .banner{
+        margin:0 -5rem;
+        background-color: $theme-light-yellow;
+        color: $black;
+        @include flex();
+        align-items: center;
+        border-radius: 1rem;
+        .banner-title {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            .title {
+                flex-direction: flex-start;
+                width: 80%;
+                text-align: center;
+                font-size: 40px;
+                margin-bottom: 2rem;
+                font-family: $font-family-heading;
+                font-weight: $font-weight-bold;
+            }
+            .subtitle {
+                width: 80%;
+                text-align: center;
+                font-size: $font-size-x-large;
+            }
+            .home-btn {
+                    margin-top: 2rem;
+                }
+            }
+            .home-img {
+                transform: translateY(100%);
+                -webkit-transform: translateY(100%);
+                overflow: hidden;
+                max-width: 100%;
+                height: auto;
+            }
+            .slide-in {
+                animation: slide-in 1.5s forwards;
+                -webkit-animation: slide-in 1.5s forwards;
+            }
+            @keyframes slide-in {
+                100% { transform: translateY(0%); }
+            }
+            @-webkit-keyframes slide-in {
+                100% { -webkit-transform: translateY(0%); }
+            }
+    }
+
+    .about {
+        margin: 7rem 0;
+        .about-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding:0 2rem;
+            .about-img {
+                height: 39px;
+                margin-bottom: 1.5rem;
+            }
+            .about-heading {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .section {
+        margin: 7rem -13rem;
+        position: relative;
+        background-color: #000000;
+        // text-align: center;
+        color: white;
+        img {
+            opacity: 0.3;
+        }
+        .section-content {
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+        }
+        .section-heading {
+            // text-align: center;
+            font-weight: $font-weight-bold;
+            color: $white;
+            font-size: 38px;
+        }
+    }
+}

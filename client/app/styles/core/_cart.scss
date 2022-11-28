@@ -72,7 +72,8 @@
       }
 
       .icon-trash {
-        color: $font-custom-color;
+        color: $theme-pink;
+        font-weight: $font-weight-semibold;
         font-size: $font-size-xx-large;
         cursor: pointer;
       }
