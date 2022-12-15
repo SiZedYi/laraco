@@ -241,7 +241,7 @@ export const addProduct = () => {
       const rules = {
         sku: 'required|alpha_dash',
         name: 'required',
-        description: 'required|max:200',
+        description: 'required|max:400',
         quantity: 'required|numeric',
         price: 'required|numeric',
         taxable: 'required',
@@ -279,7 +279,7 @@ export const addProduct = () => {
         'required.name': 'Name is required.',
         'required.description': 'Description is required.',
         'max.description':
-          'Description may not be greater than 200 characters.',
+          'Description may not be greater than 400 characters.',
         'required.quantity': 'Quantity is required.',
         'required.price': 'Price is required.',
         'required.taxable': 'Taxable is required.',
@@ -336,7 +336,7 @@ export const updateProduct = () => {
         name: 'required',
         sku: 'required|alpha_dash',
         slug: 'required|alpha_dash',
-        description: 'required|max:200',
+        description: 'required|max:400',
         quantity: 'required|numeric',
         price: 'required|numeric',
         taxable: 'required',
@@ -368,7 +368,7 @@ export const updateProduct = () => {
           'Slug may have alpha-numeric characters, as well as dashes and underscores only.',
         'required.description': 'Description is required.',
         'max.description':
-          'Description may not be greater than 200 characters.',
+          'Description may not be greater than 400 characters.',
         'required.quantity': 'Quantity is required.',
         'required.price': 'Price is required.',
         'required.taxable': 'Taxable is required.',

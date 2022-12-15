@@ -12,8 +12,7 @@
             flex-direction: column;
             height: 100%;
             .title {
-                flex-direction: flex-start;
-                width: 80%;
+                width: 100%;
                 text-align: center;
                 font-size: 40px;
                 margin-bottom: 2rem;
@@ -48,44 +47,46 @@
             }
     }
 
-    .about {
-        margin: 7rem 0;
-        .about-content {
+    .why-choose {
+        margin: 7rem -13rem;
+        .why-choose-content {
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             flex-direction: column;
-            padding:0 2rem;
-            .about-img {
-                height: 39px;
+            .why-choose-img {
+                height: 40px;
                 margin-bottom: 1.5rem;
             }
-            .about-heading {
+            .why-choose-heading {
                 margin-bottom: 1rem;
             }
         }
     }
     .section {
-        margin: 7rem -13rem;
+        margin: 7rem 0;
         position: relative;
         background-color: #000000;
-        // text-align: center;
         color: white;
         img {
+            width: 100%;
+            height: auto;
             opacity: 0.3;
         }
         .section-content {
             position: absolute;
             top: 50%;
             left: 55%;
+            color: $white;
+            font-size: 20px;
+            line-height: 2.5;
             transform: translate(-50%, -50%);
         }
         .section-heading {
-            // text-align: center;
             font-weight: $font-weight-bold;
             color: $white;
-            font-size: 38px;
+            font-size: 42px;
         }
     }
 }

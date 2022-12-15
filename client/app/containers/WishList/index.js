@@ -33,7 +33,7 @@ class Wishlist extends React.PureComponent {
             <WishList wishlist={wishlist} updateWishlist={updateWishlist} />
           )}
           {!isLoading && !displayWishlist && (
-            <NotFound message='you have no items in your wishlist yet!' />
+            <NotFound message='Bạn chưa có sản phẩm nào trong giỏ hàng!' />
           )}
         </SubPage>
       </div>

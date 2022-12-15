@@ -5,9 +5,9 @@
  */
 
 import React from 'react';
+import { Row, Col } from 'reactstrap';
 
 import { connect } from 'react-redux';
-import { Row, Col, Nav } from 'reactstrap';
 
 import actions from '../../actions';
 import AboutUs from '../../components/Common/AboutUs';
@@ -22,22 +22,24 @@ class Homepage extends React.PureComponent {
 
     return (
     <div className='homepage'>
-          <div className='banner'>
-            <div  className='banner-title'>
-              <div className='title'>DƯỢC LIỆU UY TÍN HÀNG ĐẦU VIỆT NAM</div>
-              <div className='subtitle'>Chúng tôi tự hào mang đến cho khách hàng những sản phẩm tốt nhất trên
-              thị trường với giá ưu đãi nhất</div>
-              <Button
-              variant='primary'
-              text='xem thêm'
-              className='bag-btn home-btn'
-              onClick={() => history.push("../shop")}
-              />
-            </div>
-            <div className='home-img slide-in'>
-              <img src={banners[0].imageUrl} />
-            </div>
-          </div>
+      <div className='banner'>
+      <div  className='banner-title'>
+        <pre className='title'>
+          DƯỢC LIỆU NHẬP KHẨU
+          UY TÍN HÀNG ĐẦU VIỆT NAM</pre>
+        <div className='subtitle'>Chúng tôi tự hào mang đến cho khách hàng những sản phẩm tốt nhất trên
+        thị trường đến từ những nhà cung cấp trong và ngoài nước với giá ưu đãi nhất</div>
+        <Button
+        variant='primary'
+        text='xem thêm'
+        className='bag-btn home-btn'
+        onClick={() => history.push("../shop")}
+        />
+      </div>
+      <div className='home-img slide-in'>
+        <img src={banners[0].imageUrl} />
+      </div>
+    </div>
       <AboutUs/>
     </div>
   );

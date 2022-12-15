@@ -2,6 +2,9 @@
   "name": "mern-ecommerce",
   "version": "1.0.0",
   "description": "MERN Ecommerce",
+  "engines": {
+    "node": "16.14.2"
+  },
   "main": "server/index.js",
   "scripts": {
     "clean": "rimraf dist",

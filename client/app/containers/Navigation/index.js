@@ -144,6 +144,28 @@ class Navigation extends React.PureComponent {
 
     return (
       <header className='header fixed-mobile-header text-dark'>
+        <div className='header-info'>
+          <Container>
+            <Row>
+              <Col md='4' className='text-center d-none d-md-block'>
+                <i className='fa fa-truck' />
+                <span>Free Shipping</span>
+              </Col>
+              {/* <Col md='4' className='text-center d-none d-md-block'>
+                <i className='fa fa-credit-card' />
+                <span>Payment Methods</span>
+              </Col> */}
+              <Col md='4' className='text-center d-none d-md-block'>
+                <i className='fa fa-phone' />
+                <span>Hotline: 951-999-9999</span>
+              </Col>
+              <Col xs='12' className='text-center d-block d-md-none'>
+                <i className='fa fa-phone' />
+                <span> Hotline: 951-999-9999</span>
+              </Col>
+            </Row>
+          </Container>
+        </div>
         <Container>
           <Row className='align-items-center top-header'>
             <Col
@@ -211,7 +233,7 @@ class Navigation extends React.PureComponent {
               sm={{ size: 12, order: 2 }}
               md={{ size: 9, order: 1 }}
               lg={{ size: 4, order: 3 }}
-              // className='px-0'
+              className='px-0'
             >
               <Navbar color='light' light expand='md' className='mt-1 mt-md-0'>
                 <CartIcon
@@ -220,13 +242,15 @@ class Navigation extends React.PureComponent {
                   onClick={toggleCart}
                 />
                 <Nav navbar>
-                <NavLink
+                  <NavItem>
+                    <NavLink
                       tag={ActiveLink}
                       to='/contact'
                       activeClassName='active'
-                    >
+                      >
                       Liên hệ
                     </NavLink>
+                  </NavItem>
                   <NavItem>
                     <NavLink
                       tag={ActiveLink}

@@ -11,17 +11,17 @@ router.post('/add', (req, res) => {
   const message = req.body.message;
 
   if (!email) {
-    return res.status(400).json({ error: 'You must enter an email address.' });
+    return res.status(400).json({ error: 'Bạn phải nhập địa chỉ email.' });
   }
 
   if (!name) {
     return res
       .status(400)
-      .json({ error: 'You must enter description & name.' });
+      .json({ error: 'Bạn phải nhập thông tin liên hệ.' });
   }
 
   if (!message) {
-    return res.status(400).json({ error: 'You must enter a message.' });
+    return res.status(400).json({ error: 'Bạn phải nhập tin nhắn.' });
   }
 
   const contact = new Contact({
@@ -41,7 +41,7 @@ router.post('/add', (req, res) => {
 
     res.status(200).json({
       success: true,
-      message: `We receved your message, we will reach you on your email address ${email}!`,
+      message: `Chúng tôi đã nhận được yêu cầu của bạn, chúng tôi sẽ liên hệ với bạn qua ${email}!`,
       contact: data
     });
   });
